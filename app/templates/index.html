@@ -1,0 +1,340 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class='container-fluid' id='slider'>
+      <video autoplay='autoplay' height='800' loop='loop' muted='muted' width='1920'>
+        <source src="{{ url_for('static', filename='media/spb.mp4') }}" type='video/mp4'>
+      </video>
+      <div class='container'>
+        <span id='caption'>в Санкт-Петербурге</span>
+        <br>
+        <span id='big-caption'>
+          бухгалтерские
+          <br>
+          услуги
+        </span>
+      </div>
+    </div>
+    <!-- end of slider -->
+
+
+    <div class='container-fluid' id='block1'>
+      <div class='container' id='inter-bar'>
+        <div class='row'>
+          <div class='col'>
+            <i class='fas fa-gavel'></i>
+            <h5>юридические услуги</h5>
+            <p>
+              Полный спектр юридических услуг для крупного бизнеса и небольших компаний.
+            </p>
+          </div>
+          <div class='col'>
+            <i class='fas fa-calculator'></i>
+            <h5>бухгалтерские услуги</h5>
+            <p>
+              Высококвалифицированные специалисты, готовы оказать помощь в любом вопросе.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='container' id='about'>
+        <div class='row'>
+          <div class='col-xs-12 col-md-6 col-lg-4'>
+            <b>решение</b>
+            любых ваших вопросов
+          </div>
+          <div class='col-xs-12 col-md-6 col-lg-4'>
+            <p><span id='capital'>Н</span>еваТЭК консалтинг уже много лет в сфере юридического, бухгалтерского и таможенного обслуживания. За это время наша компания не только наработала
+            </p>
+          </div>
+          <div class='col-xs-12 col-lg-4'>
+            <p>
+              большой опыт в решений не простых, с юридической точки зрения, вопросов с которыми к нам обращались наши клиенты, но и нашла много друзей, в том числе и в таможенной сфере.
+            </p>
+          </div>
+          <div class='col-xs-12'>
+            <a>мы поможем</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of block1 -->
+
+
+    <div class='container-fluid' id='block2'>
+      <div class='container' id='advantages'>
+        <div class='row'>
+          <div class='col col-xs-6 col-lg-4'>
+            <n id='capital'>50</n>
+            тысяч сделок
+          </div>
+          <div class='col col-xs-6 col-lg-4'><n id='capital'>1</n>место в Петербурге и Москве
+          </div>
+          <div class='col-xs-12 col-lg-4'>
+            <n id='capital'>10</n>
+            лет на рынке юридических услуг
+          </div>
+        </div>
+      </div>
+      <div class='container' id='about'>
+        <div class='row'>
+          <div class='col-xs-12 col-lg-4'>
+            <p><span id='capital'>Н</span>еваТЭК консалтинг уже много лет в сфере юридического, бухгалтерского и таможенного обслуживания. За это время наша компания не только наработала
+            </p>
+          </div>
+          <div class='col-xs-12 col-lg-4'>
+            <p>
+              большой опыт в решений не простых, с юридической точки зрения, вопросов с которыми к нам обращались наши клиенты, но и нашла много друзей, в том числе и в таможенной сфере.
+            </p>
+          </div>
+          <div class='col-xs-12 col-lg-4'>
+            <div id='onehunnid'>
+              100%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of block2 -->
+
+
+    <div class='container-fluid' id='block3'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col col-xl-4' id='description'>
+            <h3 class='mb-3'>
+              наши услуги
+            </h3>
+            <p>
+              Компания ООО "НеваТЭК Консалтинг" предоставляет услуги по правовым вопросам в различных сферах. большой опыт в решений не простых, с юридической точки зрения, вопросов с которыми к нам обращались наши клиенты, но и нашла много друзей, в том числе и в таможенной сфере.
+              <br>
+              <br>
+              Полный спектр юридических услуг для крупного бизнеса и небольших компаний. Наши специалисты окажут вам профессиональную помощь.
+            </p>
+          </div>
+          <div class='col-xl-8' id='service-search-block'>
+            <div class='row'>
+              <div class='col' id='service-search-bar'>
+                <form>
+                  <div class='form-group'>
+                    <!-- %label{:for=>"exampleFormControlInput1"} Поиск услуг -->
+                    <input class='form-control' id='exampleFormControlInput1' placeholder='Поиск услуг' type='email'>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-md-4' id='search-nav'>
+                <div class='row row-cols-1'>
+                  <div class='col active'>
+                    <h6>юридические услуги</h6>
+                    <span>Полный спектр юридических услуг для крупного бизнеса и небольших компаний.</span>
+                    <br>
+                    <br>
+                    <a href='#'>Полный список -></a>
+                  </div>
+                  <div class='col d-xs-none d-md-block'>
+                    <h6>- бухгалтерские услуги</h6>
+                  </div>
+                  <div class='col d-xs-none d-md-block'>
+                    <h6>- таможенное оформление</h6>
+                  </div>
+                </div>
+              </div>
+              <div class='col-xs-12 col-md-8' id='search-results'>
+                <div class='row'>
+                  <div class='col-12' id='search-status'>
+                    Всего наидено
+                    <b>
+                      7 услуг
+                    </b>
+                  </div>
+                  <div class='col'>
+                    <div class='container' id='search-results-window'>
+                      <div class='row-col-1'>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Регистрация ООО
+                            </h5>
+                          </a>
+                          <p>
+                            "... рвым шагом на пути регистрации ООО будет создание уставного капитала. Уставной капитал не облагается ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2000 ₽</b>
+                          </span>
+                        </div>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Открытие расчетных счетов
+                            </h5>
+                          </a>
+                          <p>
+                            "... твенности ООО ответственность ограничивается лишь уставным капиталом. Минимум уставной капитал соста ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2500 ₽</b>
+                          </span>
+                        </div>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Выписки из ЕГРЮЛ/ЕГРИП
+                            </h5>
+                          </a>
+                          <p>
+                            "... рвым шагом на пути регистрации ООО будет создание уставного капитала. Уставной капитал не облагается ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2000 ₽</b>
+                          </span>
+                        </div>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Регистрация ООО
+                            </h5>
+                          </a>
+                          <p>
+                            "... рвым шагом на пути регистрации ООО будет создание уставного капитала. Уставной капитал не облагается ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2000 ₽</b>
+                          </span>
+                        </div>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Открытие расчетных счетов
+                            </h5>
+                          </a>
+                          <p>
+                            "... твенности ООО ответственность ограничивается лишь уставным капиталом. Минимум уставной капитал соста ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2500 ₽</b>
+                          </span>
+                        </div>
+                        <div class='col' id='result'>
+                          <a href='#'>
+                            <h5>
+                              Выписки из ЕГРЮЛ/ЕГРИП
+                            </h5>
+                          </a>
+                          <p>
+                            "... рвым шагом на пути регистрации ООО будет создание уставного капитала. Уставной капитал не облагается ..."
+                          </p>
+                          <span id='cost'>
+                            Стоимость: от
+                            <b>2000 ₽</b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of block3 -->
+
+    <!-- contact form block -->
+    <div class='container' id='contact-block'>
+      <!-- Section: Contact v.2 -->
+      <section class='mt-3 mb-4 ml-5 mr-5'>
+        <!-- Section heading -->
+        <h2 class='h1-responsive font-weight-bold text-left my-4'>Свяжитесь с нами</h2>
+        <!-- Section description -->
+        <p class='text-left w-responsive mx-auto mb-5'>
+          Вы можете связаться с нами любым удобным из перечисленных ниже для вас способом.
+        </p>
+        <div class='row'>
+          <!-- Grid column -->
+          <div class='col-md-4'>
+            Выберите удобный для Вас способ связи:
+            <br>
+            <br>
+          </div>
+          <div class='form-check mr-3'>
+            <input class='form-check-input' id='radio1' name='cmethod' type='radio' value='phone'>
+            <label class='form-check-label' for='radio1'>Телефон</label>
+          </div>
+          <div class='form-check mr-3'>
+            <input checked='checked' class='form-check-input' id='radio2' name='cmethod' type='radio' value='mail'>
+            <label class='form-check-label' for='radio2'>Email</label>
+          </div>
+          <div class='form-check mr-3'>
+            <input class='form-check-input' id='radio3' name='cmethod' type='radio' value='post'>
+            <label class='form-check-label' for='radio3'>Мессенджер</label>
+          </div>
+          <form action='mail.php' class='row mb-md-0 mb-5' id='contact-form' name='contact-form'>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='name' name='name' placeholder='Ваше имя' type='text'>
+                <label for='name'></label>
+              </div>
+            </div>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='email' name='email' placeholder='Ваш email' type='text'>
+                <label for='email'></label>
+              </div>
+            </div>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='email' name='phone' placeholder='Ваш телефон' type='text'>
+                <label for='phone'></label>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='orgname' name='org' placeholder='Организация' type='text'>
+                <label for='org'></label>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='orgname' name='topic' placeholder='Тема сообщения' type='text'>
+                <label for='topic'></label>
+              </div>
+            </div>
+            <div class='col-md-12'>
+              <div class='md-form'>
+                <textarea class='form-control md-textarea' id='message' name='message' placeholder='Текст сообщения' rows='2' type='text'></textarea>
+                <label for='message'></label>
+              </div>
+            </div>
+          </form>
+          <div class='row text-center text-md-left'>
+            <div class='col-3'>
+              <a class='btn btn-primary' onclick=''>Отправить</a>
+            </div>
+            <div class='col-9'>
+              <div class='form-check'>
+                <input class='form-check-input' id='updates' name='updates' type='checkbox' value='1'>
+                <label class='form-check-label' for='updates'>Нажмите, чтобы подтвердить, что вы не робот.</label>
+              </div>
+            </div>
+          </div>
+          <div class='status'></div>
+        </div>
+        <!-- Grid column -->
+      </section>
+      <!-- endof Section: Contact v.2 -->
+    </div>
+
+{% endblock content %}

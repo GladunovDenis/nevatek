@@ -1,0 +1,351 @@
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext');*/
+@import url("//fonts.fontstorage.com/import/raleway.css");
+
+:root {
+    --brand-col-0: rgba(0,0,0,.6) /*#226089;*/;
+    /*brand contrast color (initialy gold yellow)*/
+    --brand-col-1: rgba(180,180,180,1) /*#FFC872*/;
+    /**/
+    --brand-col-2: rgba(0,0,0,.5) /*#5C5C5C*/;
+    /*light background*/
+    --brand-col-3: whitesmoke;
+    
+    --font-col-0: black;
+    --font-col-1: white;
+
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    background-color: var(--brand-col-3);
+}
+
+n {
+    font-family: 'roboto mono', sans-serif;
+    /*letter-spacing: -0.02em;*/
+}
+
+.default-block {
+    padding: 50px;
+    background: white;
+}
+
+#contact-bar,
+#brand-nav {
+    background-color: white;
+}
+
+#contact-bar {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: .7em;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .05em;   
+    text-transform: uppercase;
+    /*vertical-align: baseline;*/
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /*font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+    font-variant-numeric: lining-nums proportional-nums tabular-nums;
+    */
+    
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#contact-bar span {
+
+}
+
+#brand-nav {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#brand-nav .navbar-brand {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+#brand-nav .navbar-brand b {
+    color: var(--brand-col-0)    
+}
+
+#brand-nav .navbar-brand b {
+    font-weight: 800;
+}
+
+#brand-nav .navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#brand-nav .navbar-nav {
+    font-size: .9em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+#brand-nav .navbar-nav li {
+    margin-left: 15px;
+}
+
+#brand-nav .nav-item > a {
+    white-space: nowrap;
+}
+
+#brand-nav .dropdown-menu {
+    font-size: inherit;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+#slider {
+    position: relative;
+    height: 500px;
+    color: whitesmoke;
+    background-color: var(--brand-col-0);
+    /*background-image: url("//livewp.site/wp/md/zohar/wp-content/uploads/sites/53/revslider/Home/slide1.jpg"), url(https://livewp.site/wp/md/zohar/wp-content/uploads/sites/53/2019/01/slider-1.jpg);
+    background-size: cover;
+    background-position: center center;*/
+}
+
+#slider .container {
+    position: relative;
+    top: 30%;
+}
+
+#slider #caption {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+#slider #big-caption {
+    font-family: 'Playfair Display';
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: var(--brand-col-1);
+}
+
+#slider video {
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: .65;
+}
+
+#block1 {
+    background-color: whitesmoke;
+}
+
+#inter-bar {
+    position: relative;
+    top: -50px;
+    max-width: 700px; 
+    background: white;
+    box-shadow: 0px 4px 100px 0 rgba(0,0,0,.2);
+}
+
+#inter-bar .col {
+    padding: 40px;
+}
+
+#inter-bar .col:first-child {
+    box-shadow: 4px 0px 10px rgba(0,0,0,.2);
+}
+
+#inter-bar i {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    font-size: 3em !important;
+    color:  var(--brand-col-0);
+}
+
+#inter-bar h5 {
+    text-transform: uppercase;
+}
+
+#block1 {
+
+}
+
+#block1 #about {
+    /*margin-top: 50px;*/
+    padding-bottom: 50px;
+}
+
+#block1 #about .col-xs-12 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#block1 #about .col-xs-12:first-child {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+#block1 #about p {
+    line-height: 2em;
+}
+
+#capital {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: .7em;
+    color: var(--brand-col-1);
+}
+
+#block2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    color: white;
+    background-color: var(--brand-col-2);
+}
+
+#block2 #advantages {
+    margin-bottom: 50px;
+    font-size: 1.5em;
+    font-weight: 200;
+    color: var(--brand-col-1);
+}
+
+#block2 #advantages .row:first-child div[class^="col"] {
+    margin-bottom: 25px;
+}
+
+#block2 #about p {
+    line-height: 2em;
+}
+
+#onehunnid {
+    position: absolute;
+    margin-top: 0;
+    /*z-index: 5;*/
+    right: -1.1em;
+    font-size: 20em;
+    font-weight: 100;
+    line-height: 0.5em;
+    /*letter-spacing: -.01em;*/
+    color: var(--brand-col-1);
+    opacity: .2;
+    mix-blend-mode: hard-light;
+}
+
+#block3 {
+    padding-top: 50px;
+    color: white;
+    background-color: var(--brand-col-0);
+}
+
+#block3 #description {
+  margin-bottom:2em;
+  padding-right: 50px;
+}
+
+#block3 #service-search-block {
+    
+    color: black!important;
+    background-color: white;
+}
+
+#block3 h3, #block3 h6 {
+  
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#block3 h6 {
+  font-size: .9em;  
+}
+
+#block3 #service-search-bar {
+  /*height:100px;*/
+  padding: 15px 15px 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+#block3 #search-nav .col.active {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,.5);
+}
+
+#block3 #search-nav {
+  background-color: rgba(0,0,0,.1);
+}
+
+#block3 #search-nav .col {
+  padding: 10px 20px;
+  /**/
+}
+
+#block3 #search-status {
+  padding: 10px 20px;
+  box-shadow: 0 8px 15px -8px rgba(0,0,0,0.2);
+}
+
+#block3 #search-results-window {
+  height: 500px;
+  padding: 0 50px;
+  overflow-x: hidden;
+  
+}
+
+#block3 #search-results-window #result {
+  min-height: 100px;
+  padding: 30px 0;
+  border-bottom: 1px dashed rgba(0,0,0,.2)
+}
+
+#block4 {
+  height: 300px;
+}
+
+.default-block #block3 {
+    padding-top: 0;
+    margin-top: 50px;
+    box-shadow: 0 0 30px rgba(0,0,0,.25);
+    background: white !important;
+}
+
+#contact-block {
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 0 0 30px rgba(0,0,0,.25);
+    background: white !important;
+}
+
+.default-block #contact-block {
+    background: whitesmoke !important;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.page-footer p {
+    font-size: 14px;
+}

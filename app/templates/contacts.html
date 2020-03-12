@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class='container-fluid default-block' id=''>
+      <div class='container' id='default_block'>
+        <h1>{{ heading }}</h1>
+        <p>Вы можете связаться с нами любым удобным из перечисленных ниже для вас способом.</p>
+            <!-- contact form block -->
+    <div class='container' id='contact-block'>
+      <!-- Section: Contact v.2 -->
+      <section class='mt-5 mb-5 mr-5 ml-5'>
+        <div class='row'>
+          <!-- Grid column -->
+          <div class='col-md-4'>
+            Выберите удобный для Вас способ связи:
+            <br>
+            <br>
+          </div>
+          <div class='form-check mr-3'>
+            <input class='form-check-input' id='radio1' name='cmethod' type='radio' value='phone'>
+            <label class='form-check-label' for='radio1'>Телефон</label>
+          </div>
+          <div class='form-check mr-3'>
+            <input checked='checked' class='form-check-input' id='radio2' name='cmethod' type='radio' value='mail'>
+            <label class='form-check-label' for='radio2'>Email</label>
+          </div>
+          <div class='form-check mr-3'>
+            <input class='form-check-input' id='radio3' name='cmethod' type='radio' value='post'>
+            <label class='form-check-label' for='radio3'>Мессенджер</label>
+          </div>
+          <form action='mail.php' class='row mb-md-0 mb-5' id='contact-form' name='contact-form'>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='name' name='name' placeholder='Ваше имя' type='text'>
+                <label for='name'></label>
+              </div>
+            </div>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='email' name='email' placeholder='Ваш email' type='text'>
+                <label for='email'></label>
+              </div>
+            </div>
+            <div class='col-md-4'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='email' name='phone' placeholder='Ваш телефон' type='text'>
+                <label for='phone'></label>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='orgname' name='org' placeholder='Организация' type='text'>
+                <label for='org'></label>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='md-form mb-0'>
+                <input class='form-control' id='orgname' name='topic' placeholder='Тема сообщения' type='text'>
+                <label for='topic'></label>
+              </div>
+            </div>
+            <div class='col-md-12'>
+              <div class='md-form'>
+                <textarea class='form-control md-textarea' id='message' name='message' placeholder='Текст сообщения' rows='2' type='text'></textarea>
+                <label for='message'></label>
+              </div>
+            </div>
+          </form>
+          <div class='row text-center text-md-left'>
+            <div class='col-3'>
+              <a class='btn btn-primary' onclick=''>Отправить</a>
+            </div>
+            <div class='col-9'>
+              <div class='form-check'>
+                <input class='form-check-input' id='updates' name='updates' type='checkbox' value='1'>
+                <label class='form-check-label' for='updates'>Нажмите, чтобы подтвердить, что вы не робот.</label>
+              </div>
+            </div>
+          </div>
+          <div class='status'></div>
+        </div>
+        <!-- Grid column -->
+      </section>
+      <!-- endof Section: Contact v.2 -->
+    </div>
+      </div>
+    </div>
+{% endblock content %}

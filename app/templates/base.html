@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+    <!-- Bootstrap CSS -->
+    <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' rel='stylesheet'>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap' rel='stylesheet'>
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/7c90489f58.js'></script>
+    <title>{{title}}</title>
+  </head>
+
+  <body>
+
+
+    <div class='container-fluid' id='contact-bar'>
+      <div class='container navbar'>
+        <span>
+          <i class='fas fa-clock mr-2'></i>
+          {{ working_days }} /
+          <n>{{ working_time }}</n>
+        </span>
+        <div class='w-100 d-md-none'></div>
+        <span>
+          <i class='fas fa-phone mr-2'></i>
+          <n>{{ phone_number }}</n>
+        </span>
+        <div class='w-100 d-lg-none'></div>
+        <span>
+          <i class='fas fa-envelope mr-2'></i>
+          {{ email }}
+        </span>
+        <div class='w-100 d-md-none'></div>
+        <span>
+          <i class='fas fa-home mr-2'></i>
+          {{ address | safe }}<!-- <n>31</n> к. <n>2</n> -->
+        </span>
+      </div>
+    </div>
+    <!-- end of contact-bar -->
+
+
+    <div class='container-fluid' id='brand-nav'>
+      <div class='container'>
+        <nav class='navbar navbar-expand-lg navbar-light'>
+          <a class='navbar-brand' href='#'>
+            <b>НеваТЭК</b>
+            Консалтинг
+          </a>
+          <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+            <span class='navbar-toggler-icon'></span>
+          </button>
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav ml-auto'>
+              <li class="nav-item {% if id == 'index' %}active{% endif %}">
+                <a class='nav-link' href='/'>
+                  главная
+                  <span class='sr-only'>(current)</span>
+                </a>
+              </li>
+              <li class="nav-item {% if id == 'about' %}active{% endif %}">
+                <a class='nav-link' href='/about'>о компании</a>
+              </li>
+              <li class="nav-item {% if id in ['services','legal', 'accounting', 'price'] %}active{% endif %} dropdown">
+                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='/services' id='navbarDropdown' role='button'>услуги и стоимость</a>
+                <div aria-labelledby='navbarDropdown' class='dropdown-menu'>
+                  <a class='dropdown-item' href='/services/legal'>юридические</a>
+                  <a class='dropdown-item' href='/services/accounting'>бухгалтерские</a>
+                  <div class='dropdown-divider'></div>
+                  <a class='dropdown-item' href='/services/price'>стоимость</a>
+                </div>
+              </li>
+              <li class="nav-item {% if id == 'contacts' %}active{% endif %}">
+                <a class='nav-link' href='/contacts'>контакты</a>
+              </li>
+              <li class="nav-item {% if id == 'search' %}active{% endif %}">
+                <a aria-disabled='true' class='nav-link disabled' href='#' tabindex='-1'>поиск</a>
+              </li>
+            </ul>
+            <form class='d-none form-inline my-2 my-lg-0'>
+              <input aria-label='Search' class='form-control mr-sm-2' placeholder='Search' type='search'>
+              <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- end of brand-nav -->
+
+
+    {% block content %}{% endblock content%}
+
+
+        <div class='container-fluid' id='footer-block'>
+      <!-- Footer -->
+      <footer class='page-footer font-small mdb-color pt-4'>
+        <!-- Footer Links -->
+        <div class='container text-center text-md-left'>
+          <!-- Footer links -->
+          <div class='row text-center text-md-left mt-3 pb-3'>
+            <!-- Grid column -->
+            <div class='col-md-3 col-lg-3 col-xl-3 mx-auto mt-3'>
+              <h6 class='text-uppercase mb-4 font-weight-bold'>{{ sitename }}</h6>
+              <p>
+                {{ short_description }}
+              </p>
+            </div>
+            <!-- endof Grid column -->
+            <hr class='w-100 clearfix d-md-none'>
+            <!-- Grid column -->
+            <div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+              <h6 class='text-uppercase mb-4 font-weight-bold'>Меню</h6>
+              <p>
+                <a href='/index'>Главная</a>
+              </p>
+              <p>
+                <a href='/about'>О компании</a>
+              </p>
+              <p>
+                <a href='/contacts'>Контакты</a>
+              </p>
+            </div>
+            <!-- endof Grid column -->
+            <hr class='w-100 clearfix d-md-none'>
+            <!-- Grid column -->
+            <div class='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
+              <h6 class='text-uppercase mb-4 font-weight-bold'>Наши услуги</h6>
+              <p>
+                <a href='/services/legal'>Юридические</a>
+              </p>
+              <p>
+                <a href='/services/accounting'>Бухгалтерские</a>
+              </p>
+              <p>
+                <a href='/services/price'>Стоимость</a>
+              </p>
+            </div>
+            <!-- endof Grid column -->
+            <hr class='w-100 clearfix d-md-none'>
+            <!-- Grid column -->
+            <div class='col-md-4 col-lg-3 col-xl-3 mx-auto mt-3'>
+              <h6 class='text-uppercase mb-4 font-weight-bold'>Контакты</h6>
+              <p>
+                <i class='fas fa-home mr-3'></i>
+                {{ address | safe}}
+              </p>
+              <p>
+                <i class='fas fa-clock mr-3'></i>
+                {{ working_days }} / <n>{{ working_time }}</n>
+              </p>
+              <p>
+                <i class='fas fa-envelope mr-3'></i>
+                {{ email }}
+              </p>
+              <p>
+                <i class='fas fa-phone mr-3'></i>
+                <n>{{ phone_number }}</n>
+              </p>
+            </div>
+            <!-- endof Grid column -->
+          </div>
+          <!-- endof Footer links -->
+          <hr>
+          <!-- Grid row -->
+          <div class='row d-flex align-items-center'>
+            <!-- Grid column -->
+            <div class='col-md-7 col-lg-8'>
+              <!-- Copyright -->
+              <p class='text-center text-md-left'>
+                © <n>2020</n> {{ city }}:
+                <a href='https://mdbootstrap.com/education/bootstrap/'>
+                  <strong>Neva-TEK.ru</strong>
+                </a>
+              </p>
+            </div>
+            <!-- endof Grid column -->
+            <!-- Grid column -->
+            <div class='col-md-5 col-lg-4 ml-lg-0'>
+              <!-- Social buttons -->
+              <div class='text-center text-md-right'>
+                <ul class='list-unstyled list-inline'>
+                  <li class='list-inline-item'>
+                    <a class='btn-floating btn-sm rgba-white-slight mx-1'>
+                      <i class='fab fa-facebook-f'></i>
+                    </a>
+                  </li>
+                  <li class='list-inline-item'>
+                    <a class='btn-floating btn-sm rgba-white-slight mx-1'>
+                      <i class='fab fa-twitter'></i>
+                    </a>
+                  </li>
+                  <li class='list-inline-item'>
+                    <a class='btn-floating btn-sm rgba-white-slight mx-1'>
+                      <i class='fab fa-google-plus-g'></i>
+                    </a>
+                  </li>
+                  <li class='list-inline-item'>
+                    <a class='btn-floating btn-sm rgba-white-slight mx-1'>
+                      <i class='fab fa-linkedin-in'></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- endof Grid column -->
+          </div>
+          <!-- endof Grid row -->
+        </div>
+        <!-- Footer Links -->
+      </footer>
+      <!-- endof Footer -->
+    </div>
+    <!-- end of block4 -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script crossorigin='anonymous' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' src='https://code.jquery.com/jquery-3.4.1.slim.min.js'></script>
+    <script crossorigin='anonymous' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script crossorigin='anonymous' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+  
+  </body>
+
+</html>
